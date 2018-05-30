@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "About the test project";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>Project Description</h3>
+<div class="container">
+    <h4>Application design</h4>
+    <div class="col-md-12">
+        Create a simple ASP .NET MVC application in C# to manage invoices in any database system.
+    </div>
+    <div class="text-info col-md-12">
+        <h4>Implementation</h4>
+        <p>The application had been created as a "code first" web application with default scaffolding for controllers and views. </p>
+        <p>
+            Later the scafollded
+            elements had been modified to accommodate the custom "Invoice Maintenance View".
+        </p>
+    </div>
+    <h4>Application features</h4>
+    <div class="col-md-12">
+        The application should have the following features:
+        <ul>
+            <li>creating/editing an invoice,</li>
+            <li>adding/removing invoice items.</li>
+        </ul>
+
+        <div class="text-info">
+            <h4>Implementation</h4>
+            <p>
+                UI functionality had been implemented with the <a href="\Clients\AltClient.aspx">Custom Invoice Manitenance View</a>
+                wiht some functionality delegated to the default scafolded Controler/View elements created automaticaly by the MVC framework.
+                Those default elements had been later slightly modified to accommodate the new design.
+            </p>
+        </div>
+    </div>
+    <h4>API features</h4>
+    <div class="col-md-12">
+        <p>Another part of the application is to create a simple API. Correct security key needs to be located in the request header to access the endpoints.</p>
+
+        Please prepare the folowing endpoints:
+        <ul>
+            <li>get collection of unpaid invoices,</li>
+            <li>pay invoice (change status to <code>`paid`</code>),</li>
+            <li>edit invoice (PATCH request).</li>
+        </ul>
+        <div class="text-info col-md-12">
+            <h4>Implementation</h4>
+            <div>
+                <p>
+                    The endpoints had been created with a defalut automated API scafollding and provided <code>GET; PUT; POST; DELETE</code> end points for all entities:
+                    Client; Invoice; Line Item.
+                </p>
+                <p>
+                    Later the PATCH implementation had been added in the Invoice API Controller to provide <code>Invoice Status</code> update functionality.
+                    The GET verb implementation had been modified to return <code>unpaid</code> invoices collection using a GET call with <code>\api\Ivoices\?status=unpaid</code>.
+                </p>
+                <p>
+                    Security implementation using an <code>API Key</code> had been achieved with a custom implementation of the message handler inserted in the incoming http message processing.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+</div>

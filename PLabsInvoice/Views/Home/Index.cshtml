@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<hr />
+<div class="container" width="50% !important">
+    <div class="row">
+       
+
+        <div class="col-md-6">
+            <div class="thumbnail">
+                <img src="~/Content/Img/InvoiceScreenShot.png" alt="" />
+                <div class="caption ">
+                    <h5>
+                        This version features a highly customized Client/Ivoice/Line Item review and edit interface.
+                        Basic functionality is handled with a combination of modified scafollding generated code and
+                        jQuery script and ajax calls to dynamicaly provide the data to the interface. 
+                    </h5>
+                    <p>For more implementation notes please see the <a href="/Home/About">About Page.</a> </p>
+                    <button class="btn btn-lg btn-info" onclick='window.location = "@Url.Action("AltClient","Clients")"'>Go to Custom Invoice Managements View</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
